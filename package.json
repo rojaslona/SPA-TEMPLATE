@@ -1,0 +1,42 @@
+{
+  "name": "hb-spa-template",
+  "version": "1.0.0",
+  "description": "Template completo de e-commerce para H&B SPA Jardín Balbuena - Sistema de belleza y bienestar",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "spa",
+    "beauty",
+    "ecommerce",
+    "react",
+    "bootstrap",
+    "template",
+    "belleza",
+    "bienestar"
+  ],
+  "author": "H&B SPA Jardín Balbuena",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1"
+  },
+  "devDependencies": {
+    "@babel/standalone": "^7.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rojaslona/SPA-TEMPLATE.git"
+  },
+  "homepage": "https://rojaslona.github.io/SPA-TEMPLATE/",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

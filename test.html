@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&B SPA Jardín Balbuena - Test</title>
+    
+    <!-- Internal CSS for testing -->
+    <style>
+        :root {
+            --light-pink: #F5C7D1;
+            --mauve: #C9BDD5;
+            --teal-green: #5B9AA1;
+            --light-blue: #B3D6DE;
+            --lime-green: #A5D68D;
+            --white: #FFFFFF;
+            --dark-gray: #2C2C2C;
+            --light-gray: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--light-pink), var(--mauve), var(--light-blue));
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--light-pink), var(--mauve));
+            padding: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-bottom: 2rem;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--teal-green);
+            text-decoration: none;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--light-pink), var(--mauve), var(--light-blue));
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--teal-green), var(--light-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--teal-green), var(--light-blue));
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--teal-green);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--teal-green);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, var(--dark-gray), var(--teal-green));
+            color: white;
+            padding: 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                🌸 H&B SPA Jardín Balbuena
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>
+                Bienvenida a <span class="text-gradient">H&B SPA</span>
+            </h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Descubre la belleza y el bienestar en nuestro exclusivo spa. 
+                Tratamientos de última generación con productos premium para tu cuidado personal.
+            </p>
+            <a href="#" class="btn btn-primary-custom">
+                📅 Reservar Cita
+            </a>
+            <a href="#" class="btn btn-primary-custom">
+                🛍️ Ver Productos
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; color: var(--teal-green); margin-bottom: 2rem;">
+            Nuestros Servicios
+        </h2>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="feature-icon">💧</div>
+                <h3>Limpieza Facial Profunda</h3>
+                <p>Limpieza profunda con extracción de puntos negros y mascarilla purificante.</p>
+                <div class="price">$600</div>
+                <small style="color: #6C757D;">60 minutos</small>
+                <br><br>
+                <a href="#" class="btn btn-primary-custom">Reservar</a>
+            </div>
+
+            <div class="card">
+                <div class="feature-icon">❤️</div>
+                <h3>Masaje Relajante</h3>
+                <p>Masaje con aceites esenciales para relajar cuerpo y mente completamente.</p>
+                <div class="price">$800</div>
+                <small style="color: #6C757D;">90 minutos</small>
+                <br><br>
+                <a href="#" class="btn btn-primary-custom">Reservar</a>
+            </div>
+
+            <div class="card">
+                <div class="feature-icon">⭐</div>
+                <h3>Tratamiento Anti-edad</h3>
+                <p>Tratamiento especializado para combatir los signos de envejecimiento.</p>
+                <div class="price">$1,200</div>
+                <small style="color: #6C757D;">120 minutos</small>
+                <br><br>
+                <a href="#" class="btn btn-primary-custom">Reservar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; color: var(--teal-green); margin-bottom: 2rem;">
+            Productos Destacados
+        </h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h4>Crema Hidratante Premium</h4>
+                <p>Crema hidratante con ingredientes naturales para todo tipo de piel.</p>
+                <div class="price">$450</div>
+                <small style="color: #6C757D; text-decoration: line-through;">$500</small>
+                <br><br>
+                <a href="#" class="btn btn-primary-custom">🛒 Agregar al Carrito</a>
+            </div>
+
+            <div class="card">
+                <h4>Serum Anti-edad</h4>
+                <p>Serum antioxidante con vitamina C para iluminar la piel y reducir manchas.</p>
+                <div class="price">$680</div>
+                <small style="color: #6C757D; text-decoration: line-through;">$750</small>
+                <br><br>
+                <a href="#" class="btn btn-primary-custom">🛒 Agregar al Carrito</a>
+            </div>
+
+            <div class="card">
+                <h4>Mascarilla Revitalizante</h4>
+                <p>Mascarilla de arcilla para limpiar profundamente los poros y revitalizar.</p>
+                <div class="price">$320</div>
+                <br><br>
+                <a href="#" class="btn btn-primary-custom">🛒 Agregar al Carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Section -->
+    <section class="container">
+        <div class="card" style="background: linear-gradient(135deg, var(--light-blue), var(--light-pink)); text-align: center;">
+            <h3>🌸 Promoción Especial</h3>
+            <p style="font-size: 1.1rem;">
+                Lleva 2 productos de cuidado facial y obtén 20% de descuento en tu próximo tratamiento.
+            </p>
+            <a href="#" class="btn btn-primary-custom">Aprovechar Oferta</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3>🌸 H&B SPA Jardín Balbuena</h3>
+            <p>Tu destino de belleza y bienestar. Tratamientos profesionales con los más altos estándares de calidad.</p>
+            
+            <div style="margin: 2rem 0;">
+                <p><strong>📍 Dirección:</strong> Jardín Balbuena, Ciudad de México</p>
+                <p><strong>📞 Teléfono:</strong> +52 55 1234-5678</p>
+                <p><strong>📧 Email:</strong> info@hbspa.com.mx</p>
+            </div>
+            
+            <p style="margin-top: 2rem;">
+                © 2024 H&B SPA Jardín Balbuena. Todos los derechos reservados.
+                <br>
+                🔒 Sitio seguro con HTTPS
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('H&B SPA Template cargado correctamente');
+            
+            // Add click handlers to buttons
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('¡Funcionalidad en desarrollo! El template está listo para integración con React.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
