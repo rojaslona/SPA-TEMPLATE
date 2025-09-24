@@ -1,0 +1,86 @@
+/* Custom styles for H&B SPA Template */
+
+#root {
+  height: 100%;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Custom color utilities */
+.bg-spa-light-pink { background-color: var(--spa-light-pink) !important; }
+.bg-spa-mauve { background-color: var(--spa-mauve) !important; }
+.bg-spa-teal-green { background-color: var(--spa-teal-green) !important; }
+.bg-spa-light-blue { background-color: var(--spa-light-blue) !important; }
+.bg-spa-lime-green { background-color: var(--spa-lime-green) !important; }
+
+.text-spa-light-pink { color: var(--spa-light-pink) !important; }
+.text-spa-mauve { color: var(--spa-mauve) !important; }
+.text-spa-teal-green { color: var(--spa-teal-green) !important; }
+.text-spa-light-blue { color: var(--spa-light-blue) !important; }
+.text-spa-lime-green { color: var(--spa-lime-green) !important; }
+
+/* Button customizations */
+.btn-primary {
+  background-color: var(--spa-teal-green);
+  border-color: var(--spa-teal-green);
+}
+
+.btn-primary:hover {
+  background-color: var(--spa-mauve);
+  border-color: var(--spa-mauve);
+}
+
+.btn-outline-primary {
+  color: var(--spa-teal-green);
+  border-color: var(--spa-teal-green);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--spa-teal-green);
+  border-color: var(--spa-teal-green);
+}
+
+/* Dark theme adjustments */
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--spa-dark);
+  --bs-body-color: #ffffff;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: var(--spa-gray);
+  border-color: rgba(255, 255, 255, 0.125);
+}
+
+[data-bs-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Remove focus outline for mouse users */
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(91, 154, 161, 0.25);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spa-teal-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--spa-mauve);
+}
