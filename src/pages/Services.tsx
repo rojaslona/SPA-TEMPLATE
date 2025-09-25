@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
 import { getProductsByCategory } from '../services/mockData';
 import { useCart } from '../hooks/useCart';
+import ReservationModal from '../components/Forms/ReservationModal';
 
 const Services: React.FC = () => {
   const services = getProductsByCategory('servicio');
   const { addToCart } = useCart();
+  const [showReservation, setShowReservation] = useState(false);
+  const [selectedServiceId, setSelectedServiceId] = useState<string | undefined>();
 
   const handleBookService = (service: any) => {
+    // Opción 1: Agregar al carrito
     addToCart(service, 1);
-    // En una implementación real, esto redirigiría a una página de reservas
-    alert(`Servicio "${service.name}" agregado al carrito. Procede al carrito para seleccionar fecha y hora.`);
+    
+    // Opción 2: Abrir modal de reserva directa
+    setSelectedServiceId(service.id);
+    setShowReservation(true);
   };
 
   const formatDuration = (minutes: number) => {
@@ -96,7 +102,7 @@ const Services: React.FC = () => {
                   
                   <div className="text-center mt-2">
                     <small className="text-muted">
-                      * La reserva requiere seleccionar fecha y hora
+                      * Se abrirá el formulario de reserva
                     </small>
                   </div>
                 </div>
@@ -147,6 +153,16 @@ const Services: React.FC = () => {
           </div>
         </Col>
       </Row>
+      
+      {/* Modal de reserva */}
+      <ReservationModal
+        serviceId={selectedServiceId}
+        show={showReservation}
+        onClose={() => {
+          setShowReservation(false);
+          setSelectedServiceId(undefined);
+        }}
+      />
     </Container>
   );
 };
